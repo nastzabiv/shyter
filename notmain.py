@@ -2,8 +2,8 @@ from pygame import *
 from random import randint
 
 #окно
-win_width = 700
-win_height = 500
+win_width = 800
+win_height = 600
 main_win = display.set_mode((win_width, win_height))
 display.set_caption("Шутер")
 
@@ -18,7 +18,7 @@ bullets = sprite.Group()
 class GameSprite(sprite.Sprite):
     def __init__(self, picture, x, y, width, height, speed):
         super().__init__()
-        self.image = transform.scale(image.load(picture), (65,65))
+        self.image = transform.scale(image.load(picture), (60,75))
         self.speed = speed
         self.height = height
         self.width = width
@@ -38,7 +38,7 @@ class Player(GameSprite):
 
     def fire(self):
         global bullets
-        bullet = Bullet('knife', self.rect.centerx, self.rect.top, 15, 20, 15)
+        bullet = Bullet('knife.png', self.rect.centerx, self.rect.top, 5, 15, 15)
         bullets.add(bullet)
 
 class Enemy(GameSprite):
