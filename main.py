@@ -84,6 +84,7 @@ def main():
                 cl.main_win.blit(piclose, (300,300))
                 cl.main_win.blit(anger, (475,245))
                 cl.score = 0
+                cl.lost = 0
                 #вывод на экран надписи
 
             #проверка выигрыша
@@ -95,6 +96,7 @@ def main():
                 cl.main_win.blit(picwin, (300,300))
                 cl.main_win.blit(happy, (475,245))
                 cl.score = 0
+                cl.lost = 0
                 finish = True
                 #вывод на экран надписи
 
